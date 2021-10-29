@@ -20,15 +20,16 @@
  </p>
  
 ### Module Setup
- <p align="center">
-  <strong><em>[Explanation of how to use the module: prerequisites (like subscriptions), what types of data transfer services can be used to ingest in OEA, etc.]</em></strong>
- </p>
+<strong><em>[Explanation of how to use the module: prerequisites (like subscriptions), what types of data transfer services can be used to ingest in OEA, etc.]</em></strong>
+  - 
+  - In order to install this module:
+     1. Import the MSInsights_py.ipynb and process_MSInsights_data.ipynb notebooks into Synapse Studio.
+     2. Then, open the process_MSInsights_data notebook and follow the directions there.
  
 ## Module Components
 Sample out-of-the box assets for this OEA module include: 
-1. Pipeline(s): A pipeline which connects Microsoft Insights data to the data lake in your Synapse workspace.
-2. Notebook: An example notebook on processing the data from stage 1 to stage 2 within Synapse. 
-3. PowerBI template: A Power BI sample template making it easy to interact with Microsoft Insights data.
+1. Notebook: An example notebook on processing the data from stage 1 to stage 2 within Synapse. 
+2. PowerBI template: A Power BI sample template making it easy to interact with Microsoft Insights data.
  <p align="center">
   <strong><em>[INSERT POWERBI DASHBOARD TEMPLATE PICTURE HERE]</em></strong>
  </p>
@@ -70,9 +71,6 @@ You can find short videos about School Data Sync and the Insights app on the [Mi
 
 ## App usage data available via Azure Data Share
 In order to begin receiving usage data from M365, the first step is to initiate the Data Share feature within School Data Sync. This feature is in Private Preview and is not visible by default - check with your account manager to have the feature enabled for your tenant.
-
-## Setup
-In order to install this module, import the MSInsights_py.ipynb and process_MSInsights_data.ipynb notebooks into Synapse Studio, then open the process_MSInsights_data notebook and follow the directions there.
 
 ## SignalType data
 The current set of signal types coming in the app usage data is:
