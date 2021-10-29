@@ -68,13 +68,13 @@ Also note the availability of [Insights in Microsoft Teams for Education](https:
 
 You can find short videos about School Data Sync and the Insights app on the [Microsoft School Data Sync channel](https://www.youtube.com/channel/UCA8ZOC7eTfzLlkcFW3imkHg/featured).
 
-# App usage data available via Azure Data Share
+## App usage data available via Azure Data Share
 In order to begin receiving usage data from M365, the first step is to initiate the Data Share feature within School Data Sync. This feature is in Private Preview and is not visible by default - check with your account manager to have the feature enabled for your tenant.
 
-# Setup
+## Setup
 In order to install this module, import the MSInsights_py.ipynb and process_MSInsights_data.ipynb notebooks into Synapse Studio, then open the process_MSInsights_data notebook and follow the directions there.
 
-# SignalType data
+## SignalType data
 The current set of signal types coming in the app usage data is:
 * UserAtMentioned
 * ReactedWithEmoji
