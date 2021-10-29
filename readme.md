@@ -21,7 +21,7 @@
  
 ### Module Setup
 <strong><em>[Explanation of how to use the module: prerequisites (like subscriptions), what types of data transfer services can be used to ingest in OEA, etc.]</em></strong>
-  - 
+
   - In order to install this module:
      1. Import the MSInsights_py.ipynb and process_MSInsights_data.ipynb notebooks into Synapse Studio.
      2. Then, open the process_MSInsights_data notebook and follow the directions there.
