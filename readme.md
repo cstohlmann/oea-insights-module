@@ -1,5 +1,5 @@
 # Microsoft Insights Module
-This module provides a set of assets for the processing of roster and application usage data received from M365 via Azure Data Share.
+This module provides a set of assets for the processing of roster and application usage data received from M365 via [Azure Data Share](https://docs.microsoft.com/en-us/azure/data-share/overview#:~:text=%20Azure%20Data%20Share%20enables%20data%20providers%20to%3A,or%20allow%20them%20to%20automatically%20receive...%20See%20More.).
 
 ## Problem Statement
  <p align="center">
