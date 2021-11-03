@@ -1,5 +1,7 @@
 # Microsoft Insights Module
-This module provides a set of assets for the processing of roster and application usage data received from M365 via [Azure Data Share](https://docs.microsoft.com/en-us/azure/data-share/overview#:~:text=%20Azure%20Data%20Share%20enables%20data%20providers%20to%3A,or%20allow%20them%20to%20automatically%20receive...%20See%20More.).
+Microsoft Insights is a broad service that can provide School Information System (SIS) data through School Data Sync, in combination with Microsoft 365 (M365) and Microsoft Teams data, to holistically collect student interactions with Microsoft products. This module provides a set of assets for the processing of roster and application usage data received from M365 via [Azure Data Share](https://docs.microsoft.com/en-us/azure/data-share/overview#:~:text=%20Azure%20Data%20Share%20enables%20data%20providers%20to%3A,or%20allow%20them%20to%20automatically%20receive...%20See%20More.).
+
+You can use this OEA Microsoft Insights module to incorporate these datasets into your organization's OEA data lakes.
 
 ## Problem Statement
  <p align="center">
@@ -13,18 +15,19 @@ This module provides a set of assets for the processing of roster and applicatio
 
 ## Data Sources and Module Setup
 ### Data Sources
-<strong><em>[Description of data sources: what it is used for, data available, data format and possible use cases or OEA packages it can be used for]</em></strong>
 
+- As mentioned before, this Microsoft Insights module utilizes usage data from M365 applications to gauge student interaction and involvement from their online activities. 
+     * Note the availability of [Insights in Microsoft Teams for Education](https://support.microsoft.com/en-us/office/insights-preview-in-microsoft-teams-for-education-leaders-8738d1b1-4e1c-49bd-9e8d-b5292474c347?ui=en-us&rs=en-us&ad=us) which provides usage analytics available via the Insights app within Teams. Although, the assets provided within this module focus on the processing of M365 usage data.
  - App usage data available via Azure Data Share:
      * In order to begin receiving usage data from M365, the first step is to initiate the Data Share feature within [School Data Sync](https://sds.microsoft.com/). This feature is in Private Preview and is not visible by default - check with your account manager to have the feature enabled for your tenant.
+ - The data ingested is formatted as CSV files.
 
 ### Module Setup
 
  - The setup of [School Data Sync](https://sds.microsoft.com/) is a prerequisite for being able to receive this type of usage data from your M365 tenant.
     * You can also find short videos about School Data Sync and the Insights app on the [Microsoft School Data Sync channel](https://www.youtube.com/channel/UCA8ZOC7eTfzLlkcFW3imkHg/featured).
- - Note the availability of [Insights in Microsoft Teams for Education](https://support.microsoft.com/en-us/office/insights-preview-in-microsoft-teams-for-education-leaders-8738d1b1-4e1c-49bd-9e8d-b5292474c347?ui=en-us&rs=en-us&ad=us) which provides usage analytics available via the Insights app within Teams. Although, the sample data processing notebooks and PowerBI dashboard template within this module focus on the processing of M365 usage data.
  - In order to install this module:
-     1. Connect your Synpase workspace to the Azure Data Share of M365.
+     1. Connect your Synpase workspace to the Azure Data Share for M365 data.
      2. Import the MSInsights_py.ipynb and process_MSInsights_data.ipynb notebooks into Synapse Studio.
      3. Then, open and run the process_MSInsights_data notebook.
      4. After the Insights data is processed, open up the PowerBI Insights dashboard template provided, and connect to your Synapse workspace serverless SQL endpoint.
