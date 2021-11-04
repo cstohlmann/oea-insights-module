@@ -23,9 +23,14 @@ Microsoft Insights data can be used for a variety of education purposes, includi
 Ingesting data using this Microsoft Insights module provides solutions to these scenarios.
 
 ## Module Impact
- <p align="center">
-  <strong><em>[List out the impact and benefits this module will have on learners, educators and the learning process]</em></strong>
- </p>
+This Microsoft Insights module for OEA will leverage the Azure Synapse environment to aid education systems in bringing this "usage" and SIS data to their own Azure data lake for analysis. This includes a tutorial for extracting digital interaction from Microsoft Teams (if you choose to sign up for the Insights for Teams, shown below) and some M365 apps, providing a more detailed and accurate representation of roster data and the use of Microsoft applications for online learning activities. The PowerBI template included in this module can be used by system and school leaders to show:
+ - Students within an education system:
+      * Number of students within a school or district
+      * Average grades of students within a school or district
+      * Demographic breakdown of students within a school or district
+ - M365/Teams application use within a education system:
+      * Online activities and interactions with Teams by students
+
 
 ## Data Sources and Module Setup
 ### Data Sources
