@@ -3,11 +3,25 @@ Microsoft Insights is a broad service that can provide School Information System
 
 You can use this OEA Microsoft Insights module to incorporate these datasets into your organization's OEA data lakes.
 
-## Problem Statement
- <p align="center">
-  <strong><em>[Define the problem you seek to solve using this module]</em></strong>
+<p align="center">
+  <img src="https://github.com/cstohlmann/oea-ms_insights-module/blob/main/docs/images/insights%20visual.png?raw=true" alt="Microsoft Insights Visual"/>
+</p>
+
+  <p align="center">
+ <em>
+ (Microsoft documentation on Insights: https://docs.microsoft.com/en-us/microsoftteams/class-insights) 
+ </em>
  </p>
  
+## Problem Statement
+As education systems continuously progress to digital learning methods, it is significant to collect and unify SIS information with understanding of M365 application interactions. This "usage" data can be combined with other data sources (such as Microsoft Education Teams Insights), to get a real time view of student use of applications. This can also be combined with Graph Reports API Teams/M365 data collection of Microsoft application activities, to produce even richer visualizations and understanding of which application activities/interactions are deemed as valuable.
+
+Microsoft Insights data can be used for a variety of education purposes, including:
+ - School and district dashboards for education leaders to identify variability in student application interactions correlating to grades.
+ - Basic school dashboards showing the impacts of attendance based on application use.
+
+Ingesting data using this Microsoft Insights module provides solutions to these scenarios.
+
 ## Module Impact
  <p align="center">
   <strong><em>[List out the impact and benefits this module will have on learners, educators and the learning process]</em></strong>
@@ -34,8 +48,10 @@ You can use this OEA Microsoft Insights module to incorporate these datasets int
  
 ## Module Components
 Sample out-of-the box assets for this OEA module include: 
-1. Notebook: Example notebooks on processing the data from stage 1 to stage 2 within Synapse. 
-2. PowerBI template: A Power BI sample template making it easy to interact with Microsoft Insights data.
+1. [Tutorial](https://github.com/cstohlmann/oea-ms_insights-module/tree/main/docs): A tutorial on how to use this module within your own Synapse workspace.
+2. [Test data](https://github.com/cstohlmann/oea-ms_insights-module/tree/main/test_data): Ingest sample data to understand the utility and functionality of the notebooks.
+3. [Notebook](https://github.com/cstohlmann/oea-ms_insights-module/tree/main/notebook): Example notebooks on processing the data from stage 1 to stage 2 within Synapse. 
+4. [PowerBI template](https://github.com/cstohlmann/oea-ms_insights-module/tree/main/powerbi): A Power BI sample template making it easy to interact with Microsoft Insights data.
  <p align="center">
   <strong><em>[INSERT POWERBI DASHBOARD TEMPLATE PICTURE HERE]</em></strong>
  </p>
