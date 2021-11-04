@@ -1,5 +1,5 @@
-# Microsoft Insights Module
-Microsoft Insights is a broad service that can provide School Information System (SIS) data through School Data Sync (SDS), in combination with Microsoft 365 (M365) and Microsoft Teams data, to holistically collect student interactions with Microsoft products. This module provides a set of assets for the processing of roster and application usage data received from M365 via [Azure Data Share](https://docs.microsoft.com/en-us/azure/data-share/overview#:~:text=%20Azure%20Data%20Share%20enables%20data%20providers%20to%3A,or%20allow%20them%20to%20automatically%20receive...%20See%20More.).
+# Microsoft Education Insights Module
+Microsoft Education Insights is a broad service that can provide School Information System (SIS) data through School Data Sync (SDS), in combination with Microsoft 365 (M365) and Microsoft Teams data, to holistically collect student interactions with Microsoft products. This module provides a set of assets for the processing of roster and application usage data received from M365 via [Azure Data Share](https://docs.microsoft.com/en-us/azure/data-share/overview#:~:text=%20Azure%20Data%20Share%20enables%20data%20providers%20to%3A,or%20allow%20them%20to%20automatically%20receive...%20See%20More.).
 
 You can use this OEA Microsoft Insights module to incorporate these datasets into your organization's OEA data lakes.
 
