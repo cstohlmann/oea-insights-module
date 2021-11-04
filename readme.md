@@ -1,5 +1,5 @@
 # Microsoft Insights Module
-Microsoft Insights is a broad service that can provide School Information System (SIS) data through School Data Sync, in combination with Microsoft 365 (M365) and Microsoft Teams data, to holistically collect student interactions with Microsoft products. This module provides a set of assets for the processing of roster and application usage data received from M365 via [Azure Data Share](https://docs.microsoft.com/en-us/azure/data-share/overview#:~:text=%20Azure%20Data%20Share%20enables%20data%20providers%20to%3A,or%20allow%20them%20to%20automatically%20receive...%20See%20More.).
+Microsoft Insights is a broad service that can provide School Information System (SIS) data through School Data Sync (SDS), in combination with Microsoft 365 (M365) and Microsoft Teams data, to holistically collect student interactions with Microsoft products. This module provides a set of assets for the processing of roster and application usage data received from M365 via [Azure Data Share](https://docs.microsoft.com/en-us/azure/data-share/overview#:~:text=%20Azure%20Data%20Share%20enables%20data%20providers%20to%3A,or%20allow%20them%20to%20automatically%20receive...%20See%20More.).
 
 You can use this OEA Microsoft Insights module to incorporate these datasets into your organization's OEA data lakes.
 
@@ -14,7 +14,7 @@ You can use this OEA Microsoft Insights module to incorporate these datasets int
  </p>
  
 ## Problem Statement
-As education systems continuously progress to digital learning methods, it is significant to collect and unify SIS information with understanding of M365 application interactions. This "usage" data can be combined with other data sources (such as Microsoft Education Teams Insights), to get a real time view of student use of applications. This can also be combined with Graph Reports API Teams/M365 data collection of Microsoft application activities, to produce even richer visualizations and understanding of which application activities/interactions are deemed as valuable.
+As education systems continuously progress to digital learning methods, it is significant to collect and unify SIS information with understanding of M365 application interactions. This "usage" data can be combined with other data sources (such as Microsoft Education Teams Insights), to get a real time view of student use of applications. This can also be combined with Graph Reports API Teams/M365 data collection of Microsoft application activities, to produce even richer visualizations and knowledge of which application activities and interactions are deemed as valuable.
 
 Microsoft Insights data can be used for a variety of education purposes, including:
  - School and district dashboards for education leaders to identify variability in student application interactions correlating to grades.
@@ -31,8 +31,9 @@ This Microsoft Insights module for OEA will leverage the Azure Synapse environme
  - M365/Teams application use within a education system:
       * Online activities and interactions with Teams by students
 
+This dashboard example represent only data from Microsoft Insights. When this data is combined with other data sources, they can illustrate how attendance patterns can relate to student device use, other forms of online "usage" engagement, etc. With such combined data, education systems can start to analyze whether new programs or interventions help to improve teaching and learning with digital tools.
 
-## Data Sources and Module Setup
+## Data Sources and Module Setup [STILL IN-PROGRESS]
 ### Data Sources
 
 - As mentioned before, this Microsoft Insights module utilizes usage data from M365 applications to gauge student interaction and involvement from their online activities. 
@@ -61,14 +62,16 @@ Sample out-of-the box assets for this OEA module include:
   <strong><em>[INSERT POWERBI DASHBOARD TEMPLATE PICTURE HERE]</em></strong>
  </p>
 
-The Microsoft Insights module [welcome contributions](https://github.com/microsoft/OpenEduAnalytics/blob/main/CONTRIBUTING.md).
+The Microsoft Insights module [welcomes contributions](https://github.com/microsoft/OpenEduAnalytics/blob/main/CONTRIBUTING.md).
 
-This module was developed by [name of contributor]. The architecture and reference implementation for all modules is built on [Azure Synapse Analytics](https://azure.microsoft.com/en-us/services/synapse-analytics/) - with [Azure Data Lake Storage](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) as the storage backbone,  and [Azure Active Directory](https://azure.microsoft.com/en-us/services/active-directory/) providing the role-based access control.
+This module was developed by [Kwantum Analytics](https://www.kwantumanalytics.com/). The architecture and reference implementation for all modules is built on [Azure Synapse Analytics](https://azure.microsoft.com/en-us/services/synapse-analytics/) - with [Azure Data Lake Storage](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) as the storage backbone,  and [Azure Active Directory](https://azure.microsoft.com/en-us/services/active-directory/) providing the role-based access control.
 
-#### Additional Information
-<p align="center">
-  <strong><em>[Provide any additional information and resources]</em></strong>
- </p>
+### Additional Information
+| Resource | Description |
+| --- | --- |
+| [Overview of Microsoft Education Insights](https://docs.microsoft.com/en-us/microsoftteams/class-insights) | Intro to Education Insights, what it can do, and what it can provide. |
+| [Syncing SIS Data with Education Insights](https://docs.microsoft.com/en-us/microsoftteams/education-insights-sis-data-sync) | Reference to how to sync SIS data with Education Insights, and includes information on how to integrate SIS data through SDS. |
+
 
 # Legal Notices
 Microsoft and any contributors grant you a license to the Microsoft documentation and other content
@@ -85,26 +88,3 @@ Privacy information can be found at https://privacy.microsoft.com/en-us/
 
 Microsoft and any contributors reserve all other rights, whether under their respective copyrights, patents,
 or trademarks, whether by implication, estoppel or otherwise.
-
-# WHAT GENE HAD:
-
-## SignalType data
-The current set of signal types coming in the app usage data is:
-* UserAtMentioned
-* ReactedWithEmoji
-* ReplyChannelMessage
-* FileAccessed
-* VisitTeamChannel
-* SubmissionEvent
-* ShareNotificationRequested
-* ExpandChannelMessage
-* PostChannelMessage
-* OneNotePageChanged
-* FileDownloaded
-* CallRecordSummarized
-* FileModified
-* CommentCreated
-* AddedToSharedWithMe
-* FileUploaded
-* AssignmentEvent
-
