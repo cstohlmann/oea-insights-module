@@ -13,6 +13,7 @@ Below contains the data dictionary of all the data that is provided from this te
 | | | UserAgent | Device information |
 | | | SignalId | Can only be used to remove potential signal duplications |
 | | | SisClassId | Only for tenants running SDS (empty is the sample) |
+| | | ClassId | Office Group ID |
 | | | ChannelId | Optional, the channel in which action took place. In some cases such as AS signals empty==general. In cases of meetings this identify the channel the meeting took place and hence can be used as a meeting ID |
 | | | AppName | Application used: Assignments, SharePoint Online, Teams, OneDrive for Business, OneNote, TeamsMobile |
 | | | ActorId | AAD Object ID |
