@@ -1,51 +1,58 @@
 # Microsoft Education Insights Module
-Microsoft Education Insights is a broad service that can provide School Information System (SIS) data through School Data Sync (SDS), in combination with Microsoft 365 (M365) and Microsoft Teams data, to holistically collect student interactions with Microsoft products. This module provides a set of assets for the processing of roster and application usage data received from M365 via [Azure Data Share](https://docs.microsoft.com/en-us/azure/data-share/overview#:~:text=%20Azure%20Data%20Share%20enables%20data%20providers%20to%3A,or%20allow%20them%20to%20automatically%20receive...%20See%20More.).
+Microsoft [Education Insights Premium](https://education.microsoft.com/en-us/resource/3978f2d8) is a new service in Microsoft Teams for Education that provides data on learners digital activity in O365 applications like Teams, OneNote, OneDrive and Sharepoint. It includes data on education-specific apps like Assignments, Reading Progress, and Reflect. 
 
-You can use this OEA Microsoft Insights module to incorporate these datasets into your organization's OEA data lakes.
+Using this module, data from Education Insights Premium can be exported into your organization's OEA data lakes to combine it with other datasets for a variety of use cases. 
+
+There are several important prerequisites for using this module:
+
+1. Education Insights Premium requires a license fee.
+2. Education Insights Premium requires the implementation of School Data Sync on O365, which provides school and class roster data, to enable its reports in Teams.
+3. At present, the feature of Education Insights Premium that allows data to be exported to an OEA data environment is in private preview, so a special agreement must be signed to accept the terms of this feature that is not yet in General Availability. To request the private preview agreement and have the Education Insights Premium data export feature enabled, please email the request to Alex Freemon (Alex.Freemon@microsoft.com) with the subject line "Inquiry on Education Insights Premium ADS feature for OEA". 
 
 <p align="center">
   <img src="https://github.com/cstohlmann/oea-ms_insights-module/blob/main/docs/images/insights%20visual.png?raw=true" alt="Microsoft Insights Visual"/>
 </p>
 
-  <p align="center">
- <em>
- (Microsoft documentation on Insights: https://docs.microsoft.com/en-us/microsoftteams/class-insights) 
- </em>
- </p>
+ (Microsoft documentation on Education Insights Premium: [Education Insights Premium in Microsoft Teams - Microsoft Education Center](https://education.microsoft.com/en-us/resource/3978f2d8)) 
  
-## Problem Statement
-As education systems continuously progress to digital learning methods, it is significant to collect and unify SIS information with understanding of M365 application interactions. This "usage" data can be combined with other data sources (such as Microsoft Education Teams Insights), to get a real time view of student use of applications. This can also be combined with Graph Reports API Teams/M365 data collection of Microsoft application activities, to produce even richer visualizations and knowledge of which application activities and interactions are deemed as valuable.
+## Problem Statement: Digital Learning Insights
+As education systems shift to digital applications and platforms to support learning, it is important for education systems and educators to be able to see patterns of student digital activity across those applications and platforms. Most students use many different applications and platforms. This module provides data from education-specific applications in O365. This data can be combined with other digital activity data from other applications and platforms used in learning to develop "digital learning insights" across the ecosystem of applications and platforms a student uses.
 
-Microsoft Insights data can be used for a variety of education purposes, including:
- - School and district dashboards for education leaders to identify variability in student application interactions correlating to grades.
- - Basic school dashboards showing the impacts of attendance based on application use.
+Microsoft Insights Premium data can be used for a variety of analytics purposes, including:
+ - School and district dashboards for education leaders to identify variability in student activity in learning applications and platforms. 
+ - Combining Insights data with other data sources to show the relationship between digital activity and other metrics such as attendance and assessments. 
+ - Combining Insights data with student demographics, school information, or geographic data to show patterns of digital activity in relation to the whole education system. This can reveal patterns of inequality in access to digital tools and applications for learning.
 
-Ingesting data using this Microsoft Insights module provides solutions to these scenarios.
+Ingesting data using this Insights Premium module provides data to fulfill these types of use cases. Data from this module can be combined with data from other OEA modules to provide richer picture of digital learning in an education system:
+ - [Microsoft Graph Reports API Module](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/Microsoft_Graph) (includes data from other O365 applications)
+ - [Intune for Education Module](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/Intune) (includes data on devices managed by Intune)
+ - Other Digital Learning Insights modules will be added to OEA modules here. 
 
-## Module Impact
-This Microsoft Insights module for OEA will leverage the Azure Synapse environment to aid education systems in bringing this "usage" and SIS data to their own Azure data lake for analysis. This includes a tutorial for extracting digital interaction from Microsoft Teams (if you choose to sign up for the Insights for Teams, shown below) and some M365 apps, providing a more detailed and accurate representation of roster data and the use of Microsoft applications for online learning activities. The PowerBI template included in this module can be used by system and school leaders to show:
- - Students within an education system:
-      * Number of students within a school or district
-      * Average grades of students within a school or district
-      * Demographic breakdown of students within a school or district
- - M365/Teams application use within a education system:
-      * Online activities and interactions with Teams by students
-
-This dashboard example represent only data from Microsoft Insights. When this data is combined with other data sources, they can illustrate how attendance patterns can relate to student device use, other forms of online "usage" engagement, etc. With such combined data, education systems can start to analyze whether new programs or interventions help to improve teaching and learning with digital tools.
+This Education Insights Premium module will leverage the OEA Azure Synapse environment to help education systems to export their Education Insights data into their own Azure data lake for further analytics. 
 
 ## Data Sources and Module Setup [STILL IN-PROGRESS]
+\[you can start with the same list that was in the previous Insights module [here](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/M365): the M365 module\]
 ### Data Sources
+
+- O365 and Microsoft Teams applications from the education system's O365 tenant (single subscription).
+- [School Data Sync](https://sds.microsoft.com/) class and school roster data.
+<p align="center">
+  <em>
+    [MARIA DELETED EVERYTHING FROM HERE TO THE CSV BULLETPOINT]
+  </em>
+</p>
 
 - As mentioned before, this Microsoft Insights module utilizes usage data from M365 applications to gauge student interaction and involvement from their online activities. 
      * Note the availability of [Insights in Microsoft Teams for Education](https://support.microsoft.com/en-us/office/insights-preview-in-microsoft-teams-for-education-leaders-8738d1b1-4e1c-49bd-9e8d-b5292474c347?ui=en-us&rs=en-us&ad=us) which provides usage analytics available via the Insights app within Teams. Although, the assets provided within this module focus on the processing of M365 usage data.
  - App usage data available via Azure Data Share:
      * In order to begin receiving usage data from M365, the first step is to initiate the Data Share feature within [School Data Sync](https://sds.microsoft.com/). This feature is in Private Preview and is not visible by default - check with your account manager to have the feature enabled for your tenant.
- - The data ingested is formatted as CSV files.
+ - The data ingested is formatted as a CSV file.
 
 ### Module Setup
 
- - The setup of [School Data Sync](https://sds.microsoft.com/) is a prerequisite for being able to receive this type of usage data from your M365 tenant.
-    * You can also find short videos about School Data Sync and the Insights app on the [Microsoft School Data Sync channel](https://www.youtube.com/channel/UCA8ZOC7eTfzLlkcFW3imkHg/featured).
+ - Education Insights Premium is available for purchase. Contact your Microsoft account manager or fill out this form for more information. \[THIS FORM LINK NEEDS TO BE ADDED\]
+ - The setup of [School Data Sync](https://sds.microsoft.com/) is a prerequisite for Education Insights Premium.
+    * You can find short videos about School Data Sync and Education Insights Premium on the [Microsoft School Data Sync channel](https://www.youtube.com/channel/UCA8ZOC7eTfzLlkcFW3imkHg/featured).
  - In order to install this module:
      1. Connect your Synpase workspace to the Azure Data Share for M365 data.
      2. Import the MSInsights_py.ipynb and process_MSInsights_data.ipynb notebooks into Synapse Studio.
@@ -61,7 +68,11 @@ Sample out-of-the box assets for this OEA module include:
  <p align="center">
   <strong><em>[INSERT POWERBI DASHBOARD TEMPLATE PICTURE HERE]</em></strong>
  </p>
-
+ 
+ <p align="center">
+  <em>(This dashboard example represents only data from Microsoft Insights Premium.)</em>
+ </p>
+ 
 The Microsoft Insights module [welcomes contributions](https://github.com/microsoft/OpenEduAnalytics/blob/main/CONTRIBUTING.md).
 
 This module was developed by [Kwantum Analytics](https://www.kwantumanalytics.com/). The architecture and reference implementation for all modules is built on [Azure Synapse Analytics](https://azure.microsoft.com/en-us/services/synapse-analytics/) - with [Azure Data Lake Storage](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) as the storage backbone,  and [Azure Active Directory](https://azure.microsoft.com/en-us/services/active-directory/) providing the role-based access control.
