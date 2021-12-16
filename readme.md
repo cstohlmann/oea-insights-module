@@ -30,41 +30,33 @@ Ingesting data using this Insights Premium module provides data to fulfill these
 
 This Education Insights Premium module will leverage the OEA Azure Synapse environment to help education systems to export their Education Insights data into their own Azure data lake for further analytics. 
 
-## Data Sources and Module Setup [STILL IN-PROGRESS]
-\[you can start with the same list that was in the previous Insights module [here](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/M365): the M365 module\]
+## Data Sources and Module Setup 
 ### Data Sources
 
 - O365 and Microsoft Teams applications from the education system's O365 tenant (single subscription).
 - [School Data Sync](https://sds.microsoft.com/) class and school roster data.
-<p align="center">
-  <em>
-    [MARIA DELETED EVERYTHING FROM HERE TO THE CSV BULLETPOINT]
-  </em>
-</p>
-
-- As mentioned before, this Microsoft Insights module utilizes usage data from M365 applications to gauge student interaction and involvement from their online activities. 
-     * Note the availability of [Insights in Microsoft Teams for Education](https://support.microsoft.com/en-us/office/insights-preview-in-microsoft-teams-for-education-leaders-8738d1b1-4e1c-49bd-9e8d-b5292474c347?ui=en-us&rs=en-us&ad=us) which provides usage analytics available via the Insights app within Teams. Although, the assets provided within this module focus on the processing of M365 usage data.
- - App usage data available via Azure Data Share:
-     * In order to begin receiving usage data from M365, the first step is to initiate the Data Share feature within [School Data Sync](https://sds.microsoft.com/). This feature is in Private Preview and is not visible by default - check with your account manager to have the feature enabled for your tenant.
- - The data ingested is formatted as a CSV file.
+- The data ingested is formatted as a CSV file.
 
 ### Module Setup
 
  - Education Insights Premium is available for purchase. Contact your Microsoft account manager or fill out this form for more information. \[THIS FORM LINK NEEDS TO BE ADDED\]
  - The setup of [School Data Sync](https://sds.microsoft.com/) is a prerequisite for Education Insights Premium.
+    * In order to begin receiving usage data from M365, the first step is to initiate the Data Share feature within [School Data Sync](https://sds.microsoft.com/). This feature is in Private Preview and is not visible by default - check with your account manager to have the feature enabled for your tenant.
     * You can find short videos about School Data Sync and Education Insights Premium on the [Microsoft School Data Sync channel](https://www.youtube.com/channel/UCA8ZOC7eTfzLlkcFW3imkHg/featured).
  - In order to install this module:
      1. Connect your Synpase workspace to the Azure Data Share for M365 data.
      2. Import the MSInsights_py.ipynb and process_MSInsights_data.ipynb notebooks into Synapse Studio.
      3. Then, open and run the process_MSInsights_data notebook.
      4. After the Insights data is processed, open up the PowerBI Insights dashboard template provided, and connect to your Synapse workspace serverless SQL endpoint.
+
  
 ## Module Components
 Sample out-of-the box assets for this OEA module include: 
 1. [Tutorial](https://github.com/cstohlmann/oea-ms_insights-module/tree/main/docs): A tutorial on how to use this module within your own Synapse workspace.
 2. [Test data](https://github.com/cstohlmann/oea-ms_insights-module/tree/main/test_data): Ingest sample data to understand the utility and functionality of the notebooks.
-3. [Notebook](https://github.com/cstohlmann/oea-ms_insights-module/tree/main/notebook): Example notebooks on processing the data from stage 1 to stage 2 within Synapse. 
-4. [PowerBI template](https://github.com/cstohlmann/oea-ms_insights-module/tree/main/powerbi): A Power BI sample template making it easy to interact with Microsoft Insights data.
+3. Pipeline: 
+4. [Notebook](https://github.com/cstohlmann/oea-ms_insights-module/tree/main/notebook): Example notebooks on processing the data from stage 1 to stage 2 within Synapse. 
+5. [PowerBI template](https://github.com/cstohlmann/oea-ms_insights-module/tree/main/powerbi): A Power BI sample template making it easy to interact with Microsoft Insights data.
  <p align="center">
   <strong><em>[INSERT POWERBI DASHBOARD TEMPLATE PICTURE HERE]</em></strong>
  </p>
