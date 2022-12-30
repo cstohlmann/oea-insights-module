@@ -13,7 +13,7 @@ Notes:
 
 Module Pipeline for Test Data  | Module Pipeline for Production Data
 :-------------------------:|:-------------------------:
-![](https://github.com/cstohlmann/OpenEduAnalytics/blob/main/modules/module_catalog/Microsoft_Education_Insights/docs/images/pipeline%20instructions/module_test_data_pipeline_overview.png) |  ![](https://github.com/cstohlmann/OpenEduAnalytics/blob/main/modules/module_catalog/Microsoft_Education_Insights/docs/images/pipeline%20instructions/module_prod_data_pipeline_overview.png)  
+![](https://github.com/cstohlmann/oea-insights-module/blob/main/docs/images/module_v0.7_test_data_pipeline_overview.png) |  ![](https://github.com/cstohlmann/oea-insights-module/blob/main/docs/images/module_v0.7_prod_data_pipeline_overview.png)  
 
 For production data, this module pipeline can be automatically triggered (i.e. daily or weekly) to keep your Synapse data lake up-to-date.
 
