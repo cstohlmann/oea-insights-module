@@ -1,14 +1,15 @@
 # Pipelines
 
 This module uses a Synapse pipeline to:
-1. Land Microsoft Education Insights test data into Stage 1np data lake (this step is omitted for production data).
-2. Process data into Stages 2np and 2p.
-3. Create a SQL database to query Stage 2np and 2p data via Power BI.
+1. Land Microsoft Education Insights test data into ```stage1/Transactional/M365/v1.14``` of the data lake (this step is omitted for production data).
+2. Ingest data into ```stage2/Ingested/M365/v1.14```, structure the unstructured tables, and create a lake database (db) for queries.
+3. Refine data into ```stage2/Refined/M365/v1.14/(general and sensitive)``` and create lake and SQL dbs for queries.
 
 Notes:
-- "np" stands for non-pseudonomized data and "p" for pseudonomized data. 
-- Data columns contianing personal identifiable information (PII) are identified in the data schemas located in the [module class notebook](https://github.com/microsoft/OpenEduAnalytics/blob/main/modules/module_catalog/Microsoft_Education_Insights/notebook/Insights_py.ipynb)
-- As data is processed from Stage 1np to Stages 2np and 2p, data is separated into pseudonomized data which PII columns hashed (Stage 2p) and lookup tables containing PII (Stage 2np). Non-pseudonmized data will then be protected at higher security levels.
+- Ingestion initially copies the data from ```stage1``` to ```stage2/Ingested```, except changes the file format from CSVs to Delta tables.
+   * One of the later steps in the ingestion process, corrects and structures each module table's schema, as needed.
+- Data columns contianing personal identifiable information (PII) are identified in the data schemas located in the [module metadata.csv](https://github.com/microsoft/OpenEduAnalytics/blob/main/modules/module_catalog/Microsoft_Education_Insights/test_data/metadata.csv).
+- As data is refined from ```stage2/Ingested``` to ```stage2/Refined/.../(general and sensitive)```, data is separated into pseudonymized data where PII columns hashed or masked (```stage2/Refined/.../general```) and lookup tables containing the PII (```stage2/Refined/.../sensitive```). Non-pseudonmized data will then be protected at higher security levels.
 
 Module Pipeline for Test Data  | Module Pipeline for Production Data
 :-------------------------:|:-------------------------:
@@ -23,6 +24,9 @@ Two sets of instructions are included:
 2. [Production data pipeline instructions](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/module_catalog/Microsoft_Education_Insights/pipeline#production-data-pipeline-instructions)
 
 ### Test Data Pipeline Instructions
+
+<details><summary>Expand Test Data Pipeline Instructions</summary>
+<p>
 
 1. Complete the first steps of the [module setup instructions](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/module_catalog/Microsoft_Education_Insights#module-setup-instructions)
 2. Download the [module pipeline template](https://github.com/microsoft/OpenEduAnalytics/blob/main/modules/module_catalog/Microsoft_Education_Insights/pipeline/insights_pipeline_template.zip) locally to your computer.
@@ -55,7 +59,13 @@ Two sets of instructions are included:
 - SQL database has been created
 <img src="https://github.com/microsoft/OpenEduAnalytics/blob/main/modules/module_catalog/Microsoft_Education_Insights/docs/images/sql_db_create.png" width="600">
 
+</p>
+</details>
+
 ### Production Data Pipeline Instructions
+
+<details><summary>Expand Production Data Pipeline Instructions</summary>
+<p>
 
 1. Complete the [Test Data Pipeline Instructions](https://github.com/microsoft/OpenEduAnalytics/tree/main/modules/module_catalog/Microsoft_Education_Insights/pipeline#test-data-pipeline-instructions), but do not execute the pipeline yet.
 2. Review the Microsoft Insights [data feed setup instructions](https://docs.microsoft.com/en-us/schooldatasync/enable-education-data-lake-export).
@@ -75,3 +85,6 @@ Two sets of instructions are included:
 
 - SQL database has been created
 <img src="https://github.com/microsoft/OpenEduAnalytics/blob/main/modules/module_catalog/Microsoft_Education_Insights/docs/images/sql_db_create.png" width="600">
+
+</p>
+</details>
