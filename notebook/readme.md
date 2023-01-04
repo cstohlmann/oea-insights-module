@@ -1,4 +1,4 @@
-# Notebook(s)
+# Notebooks
 
 This module has three notebooks:
  1. One notebook is used to demonstrate an alternate method of data processing (i.e. landing, ingesting, and refining Insights data) with examples of explorative possbilities.
