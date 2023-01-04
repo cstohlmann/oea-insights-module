@@ -14,6 +14,7 @@ This Insights module example notebook:
  - ingests the unstructured tables into ```stage2/Ingested/M365/v1.14```, 
  - corrects the each table's schema to structure the tables properly - overwriting the tables in ```stage2/Ingested/M365/v1.14```, 
  - refines the data into ```stage2/Refined/M365/v1.14/(general and sensitive)``` by pseudonymizing (i.e. hashing or masking) sensitive information. 
+
 Basic functions for data exploration and visualization from Stage 1 to Stage 2 data lakes are also included. Steps are clearly outlined and commented.
 
 ## Module Schema Correction Notebook: [Insights_schema_correction.ipynb](https://github.com/microsoft/OpenEduAnalytics/blob/main/modules/module_catalog/Microsoft_Education_Insights/notebook/Insights_schema_correction.ipynb)
